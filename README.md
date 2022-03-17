@@ -2,9 +2,9 @@
 # 1 Лекция
 Написать Dockerfile для frontend располагается в директории /frontend, собрать и запустить
 
-cd frontend
-docker build . -t frontend
-docker run -ti -p 3000:3000 frontend
+`cd frontend`<br/>
+`docker build . -t frontend`<br/>
+`docker run -ti -p 3000:3000 frontend`<br/>
 http://localhost:3000/ is working
 
 # 2 Лекция
