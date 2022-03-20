@@ -13,6 +13,14 @@ http://localhost:3000/ is working
 2. postgresql
 
 Осуществить сетевые настройки, для работы связки backend и postgresql
+
+`docker pull postgres`<br/>
+`docker network create --subnet 172.18.0.0/24 --gateway 172.18.0.1 homework_t2`<br/>
+`docker run --name database -e POSTGRES_PASSWORD=homework -d --network homework_t2 postgres`<br/>
+`docker build . -t homework_t2_backend`<br/>
+`docker run -d --rm -p 8000:8000 --network homework_t2 --name homework_t2_backend homework_t2_backend`<br/>
+http://localhost:8000/api/v1/lib/ is working
+
 # 3 Лекция
 Написать docker-compose.yaml, для всего проекта, собрать и запустить
 
